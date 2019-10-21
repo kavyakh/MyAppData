@@ -1,0 +1,6 @@
+<ngb-rating [rate]="currentRating" [max]="10" (hover)="hovered=$event" (leave)="hovered=0" [readonly]="false"></ngb-rating>
+<h1>your rating is {{currentRating}}</h1>
+<h1>Hovered{{hovered}}</h1>
+<button class="btn btn-sm btn-outline-{{readonly ? 'danger':'success'}}" (click)="readonly=!readonly">
+    {{readonly ? "readonly":"editable"}}
+</button>
